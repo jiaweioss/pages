@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Vocabulary</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="home-view view" id="homeView" aria-labelledby="homeTitle">
+        <header class="home-header">
+          <p class="eyebrow">Room Directory</p>
+          <h1 id="homeTitle">Home Vocabulary</h1>
+          <p class="home-copy">Choose a room, then study the common objects inside it.</p>
+        </header>
+
+        <div class="carousel" aria-label="Room carousel">
+          <button class="arrow-button" id="prevBtn" type="button" aria-label="Previous room">
+            <span aria-hidden="true">&lt;</span>
+          </button>
+          <div class="carousel-stage" id="carouselStage" aria-live="polite"></div>
+          <button class="arrow-button" id="nextBtn" type="button" aria-label="Next room">
+            <span aria-hidden="true">&gt;</span>
+          </button>
+        </div>
+
+        <div class="dots" id="roomDots" aria-label="Room position"></div>
+      </section>
+
+      <section class="detail-view view" id="detailView" aria-labelledby="roomTitle" hidden>
+        <header class="room-header">
+          <button class="back-button" id="backBtn" type="button">Back</button>
+          <div class="room-title-wrap">
+            <div class="room-badge" id="roomBadge" aria-hidden="true"></div>
+            <h1 id="roomTitle"></h1>
+          </div>
+          <nav class="room-tabs" id="roomTabs" aria-label="Rooms"></nav>
+        </header>
+
+        <section class="items-frame" aria-label="Room objects">
+          <div class="items-grid" id="itemsGrid"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
